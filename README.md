@@ -15,4 +15,30 @@ In this project, we will try to make a face recognizer, training and tuning a cl
 
 * We fetched the data and split it into a train set, a validation set and a test set
 * We preprocessed the data making every image have the mean grayscale level
-* 
+* We reduced the dimensionality of the images using the PCA algorithm
+* We clustered the images using K-Means and search for the best number of clusters k
+* We tried to used the cluster algorithm to improve the performance of the Random Forest classifier but it didn't help us at all
+* We used the Gaussian Mixture models and the dimensionality reduction algorithm to detect anomalies 
+* We tuned the Random Forest using the Grid Search for finding the best hyperparameters
+
+## Code and Resources Used 
+**Python Version:** 3.7  
+**Packages:** pandas, numpy, sklearn, matplotlib  
+**ML Book:** https://www.amazon.com/Hands-Machine-Learning-Scikit-Learn-TensorFlow/dp/1491962291
+
+
+## Training Process 
+
+* K-Means
+* PCA
+* Gaussian Mixtures
+* Pipelines
+* Grid Search 
+* Random Forest
+
+## Results
+
+We observed that clustering the images in the Olivetti faces dataset didn't helped us improving the classifier, but the PCA and Gaussian Mixtures could've spotted the outliers easily. However, we were able to tune the Random Forest to 90% accuracy on the test set.
+
+
+
